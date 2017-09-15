@@ -1,0 +1,41 @@
+<!--pages/company/detail/detail.wxml-->
+<view>
+  <view class="head weui-cell">
+    <view class="name weui-cell__bd">{{company.name}}<span><image src="/image/coverify.png"></image></span>
+      <view class="companyService">{{company.service}}</view>
+    </view>
+    <image class="companyLogo weui-cell__ft" src="{{company.logo.img_url}}" data-src="{{company.logo.img_url}}" bindtap="previewLogoImage"></image>
+  </view>
+
+  <view>
+    <view class="weui-cell panel-no-border" bindtap="openLocation">
+      <view class="weui-cell__hd"><image src="/image/location.png"></image></view>
+      <view class="weui-cell__bd">{{company.address}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <view class="weui-cell panel-no-border">
+      <view class="weui-cell__hd">
+        <image src="/image/time.png"></image>
+      </view>
+      <view class="weui-cell__bd">{{company.service_time}}</view>
+      <view class="weui-cell__ft"></view>
+    </view>
+    <view class="weui-cell panel-no-border">
+      <view class="weui-cell__hd">
+        <image src="/image/mobile.png"></image>
+      </view>
+      <view class="weui-cell__bd">{{company.phone}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <view class="weui-cell panel-no-border">
+      <view class="weui-cell__hd">
+        <image src="/image/photo.png"></image>
+      </view>
+      <view class="weui-cell__bd">公司相关照片</view>
+      <view class="weui-cell__ft"></view>
+    </view>
+    <view class="photos">
+      <image class="photos-item" wx:for="{{company.item}}" src="{{item.img.img_url}}" data-src="{{item.img.img_url}}" bindtap="previewImage"></image>
+    </view>
+  </view>
+</view>

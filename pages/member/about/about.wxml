@@ -1,0 +1,17 @@
+<!--pages/member/about/about.wxml-->
+<import src="/template/template.wxml"/>
+<view class="container">
+	<view class="logo">
+		<image mode="scaleToFill" src="http://weixin.svenbarnett.cn/Uploads/Pictures/20170720/5970854997c6f.png"></image>
+		<view>Version 0.0.1</view>
+	</view>
+	<view class="qrcode">
+		<image mode="scaleToFill" src="http://w.url.cn/s/AQPieF2"></image>
+	</view>
+	<view class="introduce">
+	江苏大学基础工程训练中心/江苏高创机电制造有限公司始建于1961年，至今已有50余年的历史，是江苏大学直属的重要教学单位之一，是学校重要的科研孵化中心，是最具特色的现代制造型企业。
+	</view>
+	<view class="support">技术提供：彭思文
+	<view>www.svenbarnett.cn</view></view>	
+</view>
+<template is="footer"></template>

@@ -1,0 +1,33 @@
+<!-- 页脚 -->
+<template name="footer">
+<view class="weui-footer">
+    <view class="weui-footer__links">
+        <view class="weui-footer__link">智慧工厂</view>
+    </view>
+    <view class="weui-footer__text">Copyright © 2017 jdzc.ujs.edu.cn</view>
+</view>
+</template>
+
+<!-- 加载数据 -->
+<template name="loadingToast">
+	<view class="loadingToast">
+      <view>
+      <image class="img1" src="/image/loading.png"></image>
+      <image  class="img2" src="/image/loading.png"></image>
+      </view>
+    </view>
+</template>
+
+<template name="indexList">	
+      <navigator url="../../pages/detail/detail?id={{id}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">                              
+          </view>
+          <view class="weui-cell__bd">
+            <view class="listTitle">{{title}}</view>
+            <view class="listTime">{{create_time}}</view>
+          </view>
+          <view class="weui-cell__ft">
+            <image src="{{img.img_url}}"></image>
+          </view>
+      </navigator> 
+</template>

@@ -1,0 +1,25 @@
+<!--pages/info/info.wxml-->
+<view>
+  <view class="bgimg">
+  	<view class="title">通知列表</view>
+  	<view class="desc">展示本平台最新通知和最新优惠活动</view>
+  </view>
+  <view class="weui-cells">
+  <block wx:for="{{noticeList}}" wx:key="unique">
+  <navigator class="weui-cell-box" url="../../pages/detail/detail?id={{item.id}}">
+    <view class="weui-cell">
+      <view class="weui-cell__hd">     
+      </view>
+      <view class="weui-cell__bd">
+      	<view class="noticeTitle">{{item.title}}</view>
+      	<view class="weui-cell__tips">{{item.create_time}}<text class="noticeAuthor">{{item.author}}</text></view>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <block wx:if="{{index<3}}">
+    <image src="/image/new.png"></image>
+    </block>
+    </navigator>
+    </block>
+  </view>
+</view>

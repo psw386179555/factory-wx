@@ -1,0 +1,19 @@
+<!--pages/member/coin/coin.wxml-->
+<view class="page"> 
+
+        <view class="weui-cells__title">申请入驻公司列表</view>
+        <view class="weui-cells weui-cells_after-title">
+            <navigator class="weui-cell weui-cell_access box" style="position: relative;" hover-class="weui-cell_active" wx:for="{{company}}" url="../coin/detail/detail?id={{item.id}}">
+                <view class="weui-cell__hd"></view>
+                <view class="weui-cell__bd">{{item.name}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                 <image src="/image/check{{item.status}}.png" class="checkimg"></image>
+            </navigator>           
+           	<view class="weui-cell weui-cell_link" bindtap="inAddCo">
+             
+                <view class="weui-cell__bd">添加更多</view>
+              
+            </view>
+        </view>
+   
+</view>

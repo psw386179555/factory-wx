@@ -1,0 +1,6 @@
+/* pages/company/company.wxss */
+
+.weui-cell__bd view{
+  line-height: 50rpx;
+  height: 50rpx;
+}

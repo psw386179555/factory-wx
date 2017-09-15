@@ -1,0 +1,13 @@
+/* pages/member/verify/verify.wxss */
+
+page{
+	position: relative;
+}
+form image{
+	z-index: 10;
+	position: absolute;
+	top: 250rpx;
+	left: 250rpx;
+	width: 250rpx;
+	height: 250rpx;
+}

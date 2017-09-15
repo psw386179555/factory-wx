@@ -1,0 +1,27 @@
+/* pages/member/member.wxss */
+image{
+  width: 50rpx;
+  height: 50rpx; 
+}
+.headimage{
+  width:150rpx;
+  height:150rpx;
+  border-radius: 50%;
+}
+.weui-cell__bd{
+  padding-left: 20rpx;
+}
+.nickname{
+  font-size: 34rpx;
+}
+.phone{
+	margin-top: 20rpx;
+  font-size: 28rpx;
+}
+.headbox{
+	width: 150rpx;
+	height: 150rpx;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}

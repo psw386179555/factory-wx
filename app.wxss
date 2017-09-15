@@ -1,0 +1,89 @@
+/**app.wxss**/
+@import 'style/weui.wxss';
+@import 'style/fonts/fonts.wxss';
+
+page {
+  background-color: #f9f9f9;
+}
+
+.panel-no-border {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+/*自定义加载数据动画*/
+
+.loadingToast {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+  width: 170rpx;
+  height: 170rpx;
+  position: absolute;
+  /*background-color: rgba(0,0,0,0.3);*/
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  /*border-radius: 20rpx;*/
+}
+
+.loadingToast view {
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.img1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60rpx;
+  height: 60rpx;
+  animation: mymove1 2s infinite;
+  -webkit-animation: mymove1 2s infinite; /*Safari and Chrome*/
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+}
+
+.img2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 90rpx;
+  height: 90rpx;
+  animation: mymove2 3s infinite;
+  -webkit-animation: mymove2 3s infinite; /*Safari and Chrome*/
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+}
+
+@keyframes mymove1 {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes mymove2 {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+/*自定义加载数据动画结束*/

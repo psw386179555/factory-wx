@@ -1,0 +1,65 @@
+<!--pages/member/coin/detail/detail.wxml-->
+<!--pages/member/addco/addco.wxml-->
+<form bindsubmit="formSubmit" report-submit="true">
+  <view class="head weui-cell">
+    <view class="name weui-cell__hd">{{company.name}}
+      <view class="companyService">{{company.service}}</view>
+    </view>
+    <view class="companyLogo weui-cell__bd">  
+      <view class="weui-uploader__files">      
+          <view class="weui-uploader__file logobox">
+            <image class="weui-uploader__img" src="{{company.logo.img_url}}" data-src="{{company.logo.img_url}}" bindtap="previewLogoImage"></image>  
+          </view>       
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view class="weui-cell" bindtap="chooseLocation">
+      <view class="weui-cell__hd">
+        <image src="/image/location.png"></image>
+      </view>
+      <view class="weui-cell__bd">{{company.address}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__hd">
+        <image src="/image/time.png"></image>
+      </view>
+      <view class="weui-cell__bd">{{company.service_time}}</view>
+      <view class="weui-cell__ft"></view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__hd">
+        <image src="/image/mobile.png"></image>
+      </view>
+      <view class="weui-cell__bd">{{company.phone}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__hd">
+        <image src="/image/photo.png"></image>
+      </view>
+      <view class="weui-cell__bd" style="color: #999999">公司相关照片<span style="font-size: 10px">(需要包括营业执照)</span></view> 
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files">          
+              <block wx:for="{{company.item}}" wx:for-item="image">
+                <view class="weui-uploader__file">
+                  <image class="weui-uploader__img" src="{{image.img.img_url}}" data-src="{{image.img.img_url}}" bindtap="previewImage"></image>
+                </view>
+              </block>
+            </view> 
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__tips">涉及到公司资质等相关信息，照片中请标明用途，以免被复用！</view>
+  </view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary"  formType="submit" disabled="true">确定</button>
+  </view>
+</form>

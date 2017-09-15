@@ -1,0 +1,65 @@
+<!--pages/member/relate/message/message.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset" report-submit>
+<view class="weui-cells__title">反馈类型</view>
+<view class="weui-cells">
+<view class="cell_2 checkbox" wx:for="{{radioList}}">
+<view  bindtap="radioChange" data-index="{{index}}">
+  <view class="checkbox_group">
+    <view class="checkbox_icon checkbox_1" data-index="{{index}}" wx:if="{{activeIndex!=index}}"></view>
+    <view class="checkbox_icon checkbox_1_selected" wx:if="{{activeIndex==index}}" data-index="{{index}}"></view>
+  </view>
+  <view class="checkbox_content">{{item.text}}</view>
+</view>
+</view>
+</view>
+
+<view class="weui-cells">
+<view class="weui-cell">
+  <view class="weui-cell__bd">
+  <textarea name="content"  placeholder="请填写具体内容帮助我们了解您的意见与建议"></textarea>
+  </view>
+  </view>
+</view>
+
+ <view class="weui-cells">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__hd">
+            <view class="weui-uploader__title">点击图片可预览</view>
+            <view class="weui-uploader__info">{{imageList.length}}/5</view>
+          </view>
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files">
+              <block wx:for="{{imageList}}" wx:for-item="image">
+                <view class="weui-uploader__file">
+                  <image class="weui-uploader__img" src="{{image.path}}" data-src="{{image.path}}" bindtap="previewImage"></image>
+                </view>
+              </block>
+            </view>
+            <block wx:if="{{imageList.length}}">
+            <view class="weui-uploader__input-box-del">
+              <view class="weui-uploader__input-del" bindtap="deleteImage"></view>
+            </view>
+            </block>
+             
+            <view class="weui-uploader__input-box">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>               
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-cells"> 
+  <view class="weui-cell">  
+    <view class="weui-cell__bd">
+      <input class="weui-cell__input" type="text" name="relate" placeholder="请留下手机号、QQ号或者邮箱"/>
+    </view>
+    </view>
+  </view>
+<view class="weui-btn-area">
+   <button class="weui-btn" type="primary" formType="submit" disabled="{{btnDisabled}}">提交</button>
+ </view>
+</form>

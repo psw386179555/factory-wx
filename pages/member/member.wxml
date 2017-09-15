@@ -1,0 +1,66 @@
+<!--pages/member/member.wxml-->
+<view class="weui-cells">
+    <view class="weui-cell weui-cell_access" bindtap="{{userInfo==null?'inGetInfo':''}}" hover-class="weui-cell_active">
+        <view class="weui-cell__hd headbox">
+            <block wx:if="{{userInfo!=null}}">
+                <image class="headimage" src="{{userInfo.avatarUrl}}">
+                </image>
+            </block>
+            <block wx:else>
+                <text>请登录</text>
+            </block>
+        </view>
+        <view class="weui-cell__bd">
+            <view class="nickname">{{userInfo.nickName}}</view>
+            <view class="phone">{{userInfo.phone}}</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+</view>
+
+<view class="weui-cells">
+    <view class="weui-cell" bindtap="inApplyList" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="/image/sign.png"></image>
+        </view>
+        <view class="weui-cell__bd">我的工单</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <view class="weui-cell" bindtap="verify" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="/image/verify.png"></image>
+        </view>
+        <view class="weui-cell__bd">认证</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+</view>
+
+
+<view class="weui-cells">
+    <navigator url="../company/company" class="weui-cell">
+        <view class="weui-cell__hd">
+            <image src="/image/companlist.png"></image>
+        </view>
+        <view class="weui-cell__bd">入驻企业</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+</view>
+
+<view class="weui-cells">
+    <navigator url="./relate/relate" class="weui-cell">
+        <view class="weui-cell__hd">
+            <image src="/image/relate.png"></image>
+        </view>
+        <view class="weui-cell__bd">联系我们</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+
+    <navigator url="./about/about" class="weui-cell">
+        <view class="weui-cell__hd">
+            <image src="/image/about.png"></image>
+        </view>
+        <view class="weui-cell__bd">关于我们</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+
+</view>

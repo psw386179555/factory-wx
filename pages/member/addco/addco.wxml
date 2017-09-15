@@ -1,0 +1,90 @@
+<!--pages/member/addco/addco.wxml-->
+<form bindsubmit="formSubmit" report-submit="true">
+  <view class="head weui-cell">
+    <view class="name weui-cell__hd"><input type="text" class="weui-input" name="name" placeholder="请输入公司名称" />
+      <view class="companyService"><input type="text" class="weui-input" name="service" placeholder="请输入公司主要业务" /></view>
+    </view>
+    <view class="companyLogo weui-cell__bd">
+    <view class="logo" hidden="{{!(imageLogo.length==0)}}">公司LOGO</view>
+      <view class="weui-uploader__files">
+        <block wx:for="{{imageLogo}}" wx:for-item="image">
+          <view class="weui-uploader__file logobox">
+            <image class="weui-uploader__img" src="{{image.path}}" data-src="{{image.path}}" bindtap="previewLogoImage"></image>
+            <block wx:if="{{imageLogo.length}}">
+              <image class="delimg" src="/image/del.png" bindtap="deleteLogoImage"></image>              
+            </block>
+          </view>
+        </block>
+      </view>
+      <block wx:if="{{!imageLogo.length}}">
+        <view class="weui-uploader__input-box">
+          <view class="weui-uploader__input" bindtap="chooseLogoImage"></view>
+        </view>
+      </block>
+
+    </view>
+  </view>
+
+  <view>
+    <view class="weui-cell" bindtap="chooseLocation">
+      <view class="weui-cell__hd">
+        <image src="/image/location.png"></image>
+      </view>
+      <view class="weui-cell__bd">
+      <input type="text" class="weui-input" name="address" value="{{company.address}}" placeholder="请输入公司地址" />
+      <input type="hidden"  name="latitude" value="{{company.latitude}}" hidden="true"  />
+      <input type="hidden" name="longitude" value="{{company.longitude}}" hidden="true"  />
+      </view>     
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__hd">
+        <image src="/image/time.png"></image>
+      </view>
+      <view class="weui-cell__bd"><input type="text" class="weui-input" name="service_time" placeholder="请输入公司营业时间" /></view>     
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__hd">
+        <image src="/image/mobile.png"></image>
+      </view>
+      <view class="weui-cell__bd"><input type="phone" class="weui-input" name="phone" placeholder="请输入公司联系方式" /></view>     
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__hd">
+        <image src="/image/photo.png"></image>
+      </view>
+      <view class="weui-cell__bd" style="color: #999999">请上传公司相关照片<span style="font-size: 10px">(需要包括营业执照)</span></view>
+      <view class="weui-cell__ft">
+        <view class="weui-uploader__info">{{imageList.length}}/9</view>
+      </view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files">          
+              <block wx:for="{{imageList}}" wx:for-item="image">
+                <view class="weui-uploader__file">
+                  <image class="weui-uploader__img" src="{{image.path}}" data-src="{{image.path}}" bindtap="previewImage"></image>
+                </view>
+              </block>
+            </view>
+            <block wx:if="{{imageList.length}}">
+              <view class="weui-uploader__input-box-del">
+                <view class="weui-uploader__input-del" bindtap="deleteImage"></view>
+              </view>
+            </block>
+
+            <view class="weui-uploader__input-box">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__tips">涉及到公司资质等相关信息，照片中请标明用途，以免被复用！</view>
+  </view>
+
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="primary" disabled="{{btnDisabled}}"formType="submit">确定</button>
+  </view>
+</form>

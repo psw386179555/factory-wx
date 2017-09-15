@@ -1,0 +1,17 @@
+<!--pages/detail/detail.wxml-->
+<!-- // 引入模板 -->
+<import src="../../wxParse/wxParse.wxml"/>
+<import src="/template/template.wxml"/>
+<!-- //这里data中article为bindName -->
+<view class="container" hidden="{{hidden}}">
+	<view class="title">{{detailData.title}}</view>
+	<view class="desc">{{detailData.create_time}}<text class="author">{{detailData.author}}</text></view>
+	<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+
+
+	<!-- <view class="readnum">阅读  {{detailData.sum}}</view> -->
+</view>
+
+<view hidden="{{!hidden}}">
+	<template is="loadingToast"></template>
+</view>

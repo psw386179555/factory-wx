@@ -1,0 +1,22 @@
+<!--pages/register/register.wxml-->
+<import src="/template/template.wxml"/>
+<view class="page">
+	<view class="weui-msg">
+        <view class="weui-msg__icon-area">
+            <image src="http://weixin.svenbarnett.cn/Uploads/Pictures/20170720/5970854997c6f.png"></image>
+            <view class="weui-msg__title" style="margin-top:20rpx">智慧工厂</view>
+        </view>
+        <view class="weui-msg__text-area">
+            <view class="weui-msg__title_min">小程序由智慧工厂开发，请确认授权以下信息</view>
+            <view class="weui-msg__desc">·  获取您的微信公开信息(昵称、头像等)</view>
+        </view>
+        <view class="weui-msg__opr-area">
+            <view class="weui-btn-area">
+                <button class="weui-btn" open-type="getUserInfo" type="primary" bindgetuserinfo="getUserInfo">确认授权</button>      
+            </view>
+        </view> 
+    </view>
+    <view class="weui-msg__extra-area">
+      <template is="footer"></template>
+      </view>
+</view>

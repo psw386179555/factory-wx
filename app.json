@@ -1,0 +1,56 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/member/member",
+    "pages/member/addco/addco",
+    "pages/apply/apply",
+    "pages/info/info",
+    "pages/member/coin/coin",
+    "pages/member/coin/detail/detail",
+    "pages/company/company",
+    "pages/company/detail/detail",
+    "pages/detail/detail",
+    "pages/register/register", 
+    "pages/member/about/about",
+    "pages/member/verify/verify",
+    "pages/member/applylist/applylist",
+    "pages/member/relate/relate",
+    "pages/member/relate/message/message"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "智慧工厂",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#f9f9f9",
+    "enablePullDownRefresh":"true"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/image/index.png",
+        "selectedIconPath": "/image/index-selected.png"
+      },    
+      {
+        "pagePath": "pages/member/member",
+        "text": "个人中心",
+        "iconPath": "/image/member.png",
+        "selectedIconPath": "/image/member-selected.png"
+      }
+    ],
+    "color": "#707070",
+    "selectedColor": "#1AAD19",
+    "backgroundColor": "#f3f3f3",
+    "borderStyle": "black",
+    "position": "bottom"
+  },
+   "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

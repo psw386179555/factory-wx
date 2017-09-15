@@ -1,0 +1,5 @@
+/* pages/member/relate/relate.wxss */
+.weui-msg__icon-area image{
+	width: 320rpx;
+	height: 240rpx;
+}

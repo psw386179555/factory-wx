@@ -1,0 +1,16 @@
+<!--pages/member/applylist/applylist.wxml-->
+<view class="page">
+
+    <view class="weui-cells__title">工单列表</view>
+    <view class="weui-cells weui-cells_after-title">
+        <navigator class="weui-cell weui-cell_access box" style="position: relative;" hover-class="weui-cell_active" wx:for="{{apply}}" url="{{item.project_name}}" wx:key="unique">
+            <view class="weui-cell__hd"></view>
+            <view class="weui-cell__bd">{{item.project_name}}
+                <view class="time"> {{item.create_time}}</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            <image src="/image/check{{item.status}}.png" class="checkimg"></image>
+        </navigator>
+    </view>
+
+</view>

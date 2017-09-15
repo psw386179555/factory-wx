@@ -1,0 +1,19 @@
+/* pages/register/register.wxss */
+.weui-msg__icon-area image{
+	width: 93px;
+	height: 93px;
+	border-radius: 50%;
+}
+.weui-msg__text-area{
+	font-size: 12px;
+		text-align: left;
+}
+.weui-msg__title_min{
+
+	font-size: 14px;
+}
+.page__title{
+	padding: 20rpx 10rpx;
+	font-size: 16px;
+	font-weight: bold;
+}
